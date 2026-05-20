@@ -1,0 +1,268 @@
+@import "tailwindcss";
+
+@theme {
+  /* CSS variables for Shadcn UI and custom theme */
+  --radius: 0.5rem;
+
+  /* ─────────────────────────────────────────────────
+     FONT-FAMILIES — Tailwind-Namespace `--font-*`
+     generiert Utilities `font-sans`, `font-heading`,
+     `font-mono` automatisch.
+     ───────────────────────────────────────────────── */
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Helvetica, Arial, sans-serif;
+  --font-heading: var(--font-sans); /* Verweis — leicht austauschbar für Custom-Display-Font */
+  --font-mono:
+    "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ─────────────────────────────────────────────────
+     Farbpalette: BLACK — solide Graustufen (HSL)
+     Verwendung: Text, Flächen, Borders auf hellem Grund
+     ───────────────────────────────────────────────── */
+  --color-black-50:  hsl(0 0% 98%);
+  --color-black-100: hsl(0 0% 96%);
+  --color-black-200: hsl(0 0% 90%);
+  --color-black-300: hsl(0 0% 82%);
+  --color-black-400: hsl(0 0% 64%);
+  --color-black-500: hsl(0 0% 45%);
+  --color-black-600: hsl(0 0% 32%);
+  --color-black-700: hsl(0 0% 22%);
+  --color-black-800: hsl(0 0% 13%);
+  --color-black-900: hsl(0 0% 7%);
+  --color-black-950: hsl(0 0% 3%);
+
+  /* ─────────────────────────────────────────────────
+     Farbpalette: WHITE — semi-transparente Overlays
+     Verwendung: weisser Text/Linien auf Farb- oder Bild-
+     Flächen. Deckkraft steuert Weights, nicht Helligkeit.
+     ───────────────────────────────────────────────── */
+  --color-white-5:   rgba(255, 255, 255, 0.05);
+  --color-white-10:  rgba(255, 255, 255, 0.10);
+  --color-white-20:  rgba(255, 255, 255, 0.20);
+  --color-white-40:  rgba(255, 255, 255, 0.40);
+  --color-white-60:  rgba(255, 255, 255, 0.60);
+  --color-white-80:  rgba(255, 255, 255, 0.80);
+  --color-white-95:  rgba(255, 255, 255, 0.95);
+  --color-white-100: rgba(255, 255, 255, 1.00);
+
+  /* ─────────────────────────────────────────────────
+     Farbpalette: BRAND — Amber um #E29D49
+     500 = Brand-Kernfarbe (exakt #E29D49 ≈ hsl(33 72% 59%))
+     Hue fix bei 33°, Saturation/Lightness für Skala
+     ───────────────────────────────────────────────── */
+  --color-brand-50:  hsl(33 80% 97%);
+  --color-brand-100: hsl(33 78% 92%);
+  --color-brand-200: hsl(33 76% 85%);
+  --color-brand-300: hsl(33 74% 75%);
+  --color-brand-400: hsl(33 73% 66%);
+  --color-brand-500: hsl(33 72% 59%); /* ≈ #E29D49 */
+  --color-brand-600: hsl(33 70% 50%);
+  --color-brand-700: hsl(33 72% 40%);
+  --color-brand-800: hsl(33 75% 30%);
+  --color-brand-900: hsl(33 78% 22%);
+  --color-brand-950: hsl(33 82% 13%);
+
+  /* ─────────────────────────────────────────────────
+     Semantic Tokens (shadcn/ui)
+     ───────────────────────────────────────────────── */
+  --color-background: hsl(0 0% 100%);
+  --color-foreground: hsl(0 0% 3.9%);
+
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(0 0% 3.9%);
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 3.9%);
+
+  --color-primary: hsl(0 0% 9%);
+  --color-primary-foreground: hsl(0 0% 98%);
+
+  --color-secondary: hsl(0 0% 96.1%);
+  --color-secondary-foreground: hsl(0 0% 9%);
+
+  --color-muted: hsl(0 0% 96.1%);
+  --color-muted-foreground: hsl(0 0% 45.1%);
+
+  --color-accent: hsl(0 0% 96.1%);
+  --color-accent-foreground: hsl(0 0% 9%);
+
+  --color-destructive: hsl(0 84.2% 60.2%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  /* ─────────────────────────────────────────────────
+     Farbpalette: ERROR — rote Feedback-Signale
+     Gleiche 10er-Skala wie brand/black.
+     Nutzung:
+       text-error-600    → Error-Text, Fehlermeldungen
+       bg-error-50       → Error-Background (Alert-Boxen)
+       border-error-200  → Error-Border (Alert-Boxen)
+       bg-error-500      → Destructive-Button (z. B. Loeschen)
+       hover:bg-error-600/ error-700 → Button-Hover
+     ───────────────────────────────────────────────── */
+  --color-error-50:  hsl(0 86% 97%);
+  --color-error-100: hsl(0 93% 94%);
+  --color-error-200: hsl(0 96% 89%);
+  --color-error-300: hsl(0 94% 82%);
+  --color-error-400: hsl(0 91% 71%);
+  --color-error-500: hsl(0 84% 60%);
+  --color-error-600: hsl(0 72% 51%);
+  --color-error-700: hsl(0 74% 42%);
+  --color-error-800: hsl(0 70% 35%);
+  --color-error-900: hsl(0 63% 31%);
+
+  /* ─────────────────────────────────────────────────
+     Farbpalette: SUCCESS — gruene Feedback-Signale
+     Konvention: Erfolg/Bestaetigung = Gruen (Emerald-Ton).
+     Nutzung:
+       text-success-600  → Success-Text
+       bg-success-50     → Success-Background (dezent)
+       bg-success-100    → Icon-Background (Circle hinter Check)
+       text-success-700  → Success-Icon auf hellem Grund
+     ───────────────────────────────────────────────── */
+  --color-success-50:  hsl(141 84% 95%);
+  --color-success-100: hsl(141 79% 85%);
+  --color-success-200: hsl(141 77% 73%);
+  --color-success-300: hsl(142 76% 62%);
+  --color-success-400: hsl(142 71% 51%);
+  --color-success-500: hsl(142 71% 45%);
+  --color-success-600: hsl(142 72% 35%);
+  --color-success-700: hsl(142 75% 28%);
+  --color-success-800: hsl(143 73% 22%);
+  --color-success-900: hsl(144 71% 18%);
+
+  --color-border: hsl(0 0% 89.8%);
+  --color-input: hsl(0 0% 89.8%);
+  --color-ring: hsl(0 0% 3.9%);
+
+  /* ─────────────────────────────────────────────────
+     LAYOUT — Container-Breiten für Page-Wrapper
+     Eigener Namespace (nicht --container-*, weil dieser
+     schon für Max-Width-Utilities reserviert ist).
+     Nutzung: <Container size="lg"> oder
+     max-w-[var(--layout-lg)]
+     ───────────────────────────────────────────────── */
+  --layout-xs: 40rem;   /*  640 px — Reading-Column   */
+  --layout-sm: 48rem;   /*  768 px — schmale Content  */
+  --layout-md: 64rem;   /* 1024 px — Standard-Content */
+  --layout-lg: 80rem;   /* 1280 px — breite Layouts   */
+  --layout-xl: 96rem;   /* 1536 px — Full-Width       */
+
+  /* ─────────────────────────────────────────────────
+     MAX-WIDTH — Constraint-Skala für einzelne Elemente
+     Tailwind-v4-Namespace `--container-*` generiert
+     automatisch `max-w-*` Utilities.
+     Nutzung: className="max-w-md"  (für Textblöcke etc.)
+     ───────────────────────────────────────────────── */
+  --container-xxs: 16rem;  /* 256 px — Inline-Widgets, Buttons    */
+  --container-xs:  20rem;  /* 320 px — Form-Inputs                */
+  --container-sm:  24rem;  /* 384 px — kleine Cards               */
+  --container-md:  32rem;  /* 512 px — Cards mittel               */
+  --container-lg:  40rem;  /* 640 px — Textblöcke                 */
+  --container-xl:  48rem;  /* 768 px — breite Textblöcke          */
+  --container-xxl: 56rem;  /* 896 px — maximale Element-Breite    */
+
+  /* ─────────────────────────────────────────────────
+     PAGE PADDING — horizontaler Viewport-Inset
+     Wird unten responsiv umgesetzt (:root-Override).
+     Nutzung: className="px-[var(--page-padding-inline)]"
+     oder automatisch via <Container> / <PagePadding>
+     ───────────────────────────────────────────────── */
+  --page-padding-inline: 1.5rem;  /* Fallback, siehe :root unten */
+
+  /* ─────────────────────────────────────────────────
+     BREAKPOINTS — Tailwind-v4-Namespace `--breakpoint-*`
+     erzeugt automatisch min-width Variants.
+       mini: ≥ 651 px  → Konfigurator/Warenkorb in Navbar
+       nav : ≥ 1471 px → Desktop-Navigation sichtbar
+     Unterhalb → Burger + Full-Screen Mega-Menu.
+     ───────────────────────────────────────────────── */
+  --breakpoint-mini: 40.6875rem;   /*  651 px */
+  --breakpoint-nav:  91.9375rem;   /* 1471 px */
+}
+
+/* ─────────────────────────────────────────────────────
+   Responsive Page-Padding — ein Token, drei Breakpoints.
+   Alle Components, die --page-padding-inline nutzen,
+   werden automatisch responsive, ohne eigene Queries.
+   ───────────────────────────────────────────────────── */
+:root {
+  --page-padding-inline: 1.5rem;  /* Mobile  :  24 px */
+}
+@media (min-width: 48rem) {        /* ≥ 768 px        */
+  :root { --page-padding-inline: 2rem; }    /*       32 px */
+}
+@media (min-width: 80rem) {        /* ≥ 1280 px       */
+  :root { --page-padding-inline: 3rem; }    /*       48 px */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse-slow 2s ease-in-out infinite;
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   MEGA-MENU — Fullscreen-Overlay-Stagger
+   Für mobile Nav: Items fade + slide-up gestaffelt.
+   ───────────────────────────────────────────────────── */
+@keyframes mega-item-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .mega-item {
+    will-change: opacity, transform;
+  }
+  /* Items sind per Default sichtbar — kein opacity:0 als Fallback,
+     sonst bleiben sie unsichtbar falls die Animation nicht feuert.
+     Beim Öffnen (data-mega-open="true") läuft die Stagger-Animation
+     mit animation-fill-mode: both (from-State vor Delay sichtbar). */
+  [data-mega-open="true"] .mega-item {
+    animation: mega-item-in 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+/* Collapsible (Radix) — smoothes Auf-/Zuklappen für Mobile-Mega-Menu. */
+@keyframes mega-collapsible-open {
+  from { height: 0; }
+  to   { height: var(--radix-collapsible-content-height); }
+}
+@keyframes mega-collapsible-close {
+  from { height: var(--radix-collapsible-content-height); }
+  to   { height: 0; }
+}
+.mega-collapsible[data-state="open"] {
+  animation: mega-collapsible-open 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mega-collapsible[data-state="closed"] {
+  animation: mega-collapsible-close 200ms cubic-bezier(0.7, 0, 0.84, 0);
+}

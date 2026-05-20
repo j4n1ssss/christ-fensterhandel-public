@@ -1,0 +1,38 @@
+export const verglasungenData = [
+  {
+    name: "2-fach Standard",
+    slug: "2-fach-standard",
+    beschreibung: "Standard 2-fach Verglasung mit gutem Wärmeschutz",
+    ug_wert: 1.1,
+    aufpreis: 0,
+    aktiv: true,
+    sortOrder: 1,
+  },
+  {
+    name: "3-fach Standard",
+    slug: "3-fach-standard",
+    beschreibung: "3-fach Verglasung für verbesserte Wärmedämmung",
+    ug_wert: 0.7,
+    aufpreis: 2500,
+    aktiv: true,
+    sortOrder: 2,
+  },
+  {
+    name: "3-fach Schallschutz",
+    slug: "3-fach-schallschutz",
+    beschreibung: "3-fach Verglasung mit erhöhtem Schallschutz",
+    ug_wert: 0.7,
+    aufpreis: 4500,
+    aktiv: true,
+    sortOrder: 3,
+  },
+  {
+    name: "3-fach Sicherheitsglas",
+    slug: "3-fach-sicherheitsglas",
+    beschreibung: "3-fach Verglasung mit Sicherheitsglas (VSG)",
+    ug_wert: 0.7,
+    aufpreis: 5500,
+    aktiv: true,
+    sortOrder: 4,
+  },
+];

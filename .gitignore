@@ -1,0 +1,67 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+.env.production
+.env.staging
+
+# project docs (excluded from public repo)
+/docs/
+
+# server/deployment config (excluded from public repo)
+/config/nginx/
+/.github/workflows/
+/Dockerfile
+/docker-compose.yml
+/docker-compose.n8n.yml
+/.dockerignore
+
+# macOS (recursive)
+**/.DS_Store
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# media uploads
+/media
+/pdf-uploads
+
+
+# Payload generated
+src/app/(payload)/admin/importMap.js
+
+# testing / debugging artifacts
+/.playwright-mcp
+list-snap.md
+nav-snapshot.md
+
+# legacy extracted packages (Relume was discarded)
+/package

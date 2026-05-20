@@ -1,0 +1,42 @@
+export const glasdekoreData = [
+  {
+    name: "Ornament",
+    slug: "ornament",
+    beschreibung: "Klassisches Ornamentglas für Sichtschutz mit Lichtdurchlass",
+    aufpreis: 2000,
+    aktiv: true,
+    sortOrder: 1,
+  },
+  {
+    name: "Milchglas",
+    slug: "milchglas",
+    beschreibung: "Satiniertes Glas für maximalen Sichtschutz",
+    aufpreis: 2500,
+    aktiv: true,
+    sortOrder: 2,
+  },
+  {
+    name: "Chinchilla",
+    slug: "chinchilla",
+    beschreibung: "Strukturiertes Glas mit Chinchilla-Muster",
+    aufpreis: 2000,
+    aktiv: true,
+    sortOrder: 3,
+  },
+  {
+    name: "Kathedral",
+    slug: "kathedral",
+    beschreibung: "Glas mit Kathedral-Struktur für dekorativen Sichtschutz",
+    aufpreis: 2000,
+    aktiv: true,
+    sortOrder: 4,
+  },
+  {
+    name: "Masterpoint",
+    slug: "masterpoint",
+    beschreibung: "Glas mit Masterpoint-Muster",
+    aufpreis: 2500,
+    aktiv: true,
+    sortOrder: 5,
+  },
+];

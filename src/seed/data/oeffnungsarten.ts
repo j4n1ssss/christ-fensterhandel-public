@@ -1,0 +1,38 @@
+export const oeffnungsartenData = [
+  {
+    name: 'Fest',
+    slug: 'fest',
+    beschreibung: 'Festverglasung ohne Öffnungsfunktion',
+    fuer_fenster: true,
+    fuer_balkontuer: false,
+    aktiv: true,
+    sortOrder: 1,
+  },
+  {
+    name: 'Kipp',
+    slug: 'kipp',
+    beschreibung: 'Kippfunktion für Lüftung',
+    fuer_fenster: true,
+    fuer_balkontuer: true,
+    aktiv: true,
+    sortOrder: 2,
+  },
+  {
+    name: 'Dreh',
+    slug: 'dreh',
+    beschreibung: 'Klassische Drehfunktion',
+    fuer_fenster: true,
+    fuer_balkontuer: true,
+    aktiv: true,
+    sortOrder: 3,
+  },
+  {
+    name: 'Dreh-Kipp',
+    slug: 'dreh-kipp',
+    beschreibung: 'Kombinierte Dreh- und Kippfunktion',
+    fuer_fenster: true,
+    fuer_balkontuer: true,
+    aktiv: true,
+    sortOrder: 4,
+  },
+]

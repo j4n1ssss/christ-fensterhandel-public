@@ -1,0 +1,24 @@
+:root {
+  --font-mono: 'Roboto Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  line-height: 32px;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  margin: 0;
+  /* Kein height: 100% — würde position: sticky brechen, weil body
+     dann zum Scroll-Container wird. min-h-screen in layout.tsx reicht. */
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}

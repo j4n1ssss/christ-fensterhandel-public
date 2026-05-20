@@ -1,0 +1,38 @@
+export const fensterformenData = [
+  {
+    name: 'Rechteck',
+    slug: 'rechteck',
+    beschreibung: 'Standard-Rechteckform für alle Einbausituationen',
+    erlaubte_fluegelanzahl_slugs: ['1-fluegelig', '2-fluegelig', '3-fluegelig'],
+    erlaubte_oeffnungsarten_slugs: ['fest', 'kipp', 'dreh', 'dreh-kipp'],
+    aktiv: true,
+    sortOrder: 1,
+  },
+  {
+    name: 'Rundbogen',
+    slug: 'rundbogen',
+    beschreibung: 'Fenster mit Rundbogen im oberen Bereich',
+    erlaubte_fluegelanzahl_slugs: ['1-fluegelig', '2-fluegelig'],
+    erlaubte_oeffnungsarten_slugs: ['fest', 'dreh', 'dreh-kipp'],
+    aktiv: true,
+    sortOrder: 2,
+  },
+  {
+    name: 'Stichbogen',
+    slug: 'stichbogen',
+    beschreibung: 'Fenster mit flachem Bogen im oberen Bereich',
+    erlaubte_fluegelanzahl_slugs: ['1-fluegelig', '2-fluegelig'],
+    erlaubte_oeffnungsarten_slugs: ['fest', 'dreh', 'dreh-kipp'],
+    aktiv: true,
+    sortOrder: 3,
+  },
+  {
+    name: 'Dreieck',
+    slug: 'dreieck',
+    beschreibung: 'Dreieckiges Fenster für Giebelbereiche',
+    erlaubte_fluegelanzahl_slugs: ['1-fluegelig'],
+    erlaubte_oeffnungsarten_slugs: ['fest'],
+    aktiv: true,
+    sortOrder: 4,
+  },
+]
